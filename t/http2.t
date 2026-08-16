@@ -117,9 +117,9 @@ Content-Type: text/plain
 Content-Disposition: form-data; name="file"; filename="test.txt"}]
 --- request eval
 [["POST /upload/\r\n",
-"@" . $ENV{TEST_NGINX_UPLOAD_FILE}],
+"x" x 131072],
 ["POST /upload/\r\n",
-"@" . $ENV{TEST_NGINX_UPLOAD_FILE}]]
+"x" x 131072]]
 --- error_code eval
 [201, 200]
 --- response_body eval
@@ -159,9 +159,9 @@ Content-Type: text/plain
 Content-Disposition: form-data; name="file"; filename="test.txt"}]
 --- request eval
 [["POST /upload/\r\n",
-"@" . $ENV{TEST_NGINX_UPLOAD_FILE}],
+"x" x 131072],
 ["POST /upload/\r\n",
-"@" . $ENV{TEST_NGINX_UPLOAD_FILE}]]
+"x" x 131072]]
 --- error_code eval
 [201, 200]
 --- response_body eval
